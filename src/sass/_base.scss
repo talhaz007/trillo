@@ -1,0 +1,77 @@
+
+
+:root {
+    --color-primary: #eb2f64;
+    --color-primary-light: #FF3366;
+    --color-primary-dark: #BA265D;
+
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+    
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
+    --line: 1px solid var(--color-grey-light-2);
+}
+
+$bp-largest : 75em; //1200px
+$bp-large : 68.75em; // 1100px
+$bp-medium:56.25em; //900px
+$bp-small:37.5em; //600px
+$bp-smallest:31.25em; //500px
+
+*{
+    margin:0;
+    padding:0
+}
+
+body{
+    background-color: #eb2f64;
+}
+
+// @mixin respond ($break-point){
+//     @if $break-point == phone {
+//         @media (max-width:37.5em) { @content } //600px
+//     }
+//     @if $break-point == tab-port {
+//         @media (max-width:56.25em) { @content } //900px
+//     }
+//     @if $break-point == tab-land {
+//         @media (max-width:75em){ @content }  //1200px
+//     }
+//     @if $break-point == desktop {
+//         @media (min-width:112.5em){ @content } //1800
+//     }
+// }
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1 rem = 10px , 10px/16px=62.5%
+    
+    @media only screen and (max-width:$bp-large){
+        font-size: 50%; // 8px
+    }
+
+    // @include respond(desktop){
+    //     font-size: 30px;
+    // }
+
+    // @include respond(tab-land){
+    //     font-size: 20px;
+    // }
+
+    // @include respond(tab-port){
+    //     font-size: 10px;
+    // }
+    // @include respond(phone){
+    //     font-size: 2px;
+    // }
+}
+
